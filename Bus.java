@@ -18,3 +18,13 @@ public class Bus {
     public boolean naikkanPenumpang(Penumpang p) {
         try {
             p.bayar(ONGKOS_BUS);
+       } catch (SaldoTidakCukupException e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
+
+        int total = penumpangBiasa.size() + penumpangPrioritas.size() + penumpangBerdiri.size();
+        if (total >= 40) {
+            System.out.println("Bus penuh!");
+            return false;
+        }
