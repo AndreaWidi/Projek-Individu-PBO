@@ -48,3 +48,13 @@ public class Bus {
                 penumpangPrioritas.remove(p);
                 return true;
             }
+        }
+        for (Penumpang p : penumpangBiasa) {
+            if (p.getNama().equalsIgnoreCase(nama)) {
+                penumpangBiasa.remove(p);
+                return true;
+            }
+        }
+        for (Penumpang p : penumpangBerdiri) {
+            if (p.getNama().equalsIgnoreCase(nama)) {
+                penumpangBerdiri.remove(p);
