@@ -8,3 +8,13 @@ public class Bus {
 
     public static final int ONGKOS_BUS = 2000;
     private int totalPendapatan = 0;
+
+    public Bus() {}
+
+    private boolean layakPrioritas(Penumpang p) {
+        return p.getKategori() == Kategori.PRIORITAS;
+    }
+
+    public boolean naikkanPenumpang(Penumpang p) {
+        try {
+            p.bayar(ONGKOS_BUS);
