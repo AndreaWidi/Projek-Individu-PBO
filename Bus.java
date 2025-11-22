@@ -37,3 +37,14 @@ public class Bus {
             if (penumpangBiasa.size() < 16) penumpangBiasa.add(p);
             else penumpangBerdiri.add(p);
         }
+
+        totalPendapatan += ONGKOS_BUS;
+        return true;
+    }
+
+    public boolean turunkanPenumpang(String nama) {
+        for (Penumpang p : penumpangPrioritas) {
+            if (p.getNama().equalsIgnoreCase(nama)) {
+                penumpangPrioritas.remove(p);
+                return true;
+            }
