@@ -58,3 +58,13 @@ public class Bus {
         for (Penumpang p : penumpangBerdiri) {
             if (p.getNama().equalsIgnoreCase(nama)) {
                 penumpangBerdiri.remove(p);
+                penumpangBerdiri.remove(p);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        String s = "\n=== DAFTAR PENUMPANG ===\n";
