@@ -68,3 +68,12 @@ public class Bus {
     @Override
     public String toString() {
         String s = "\n=== DAFTAR PENUMPANG ===\n";
+
+        s += "\nPrioritas : " + (penumpangPrioritas.isEmpty() ? "<kosong>" : "");
+        for (Penumpang p : penumpangPrioritas) s += p.getNama() + " ";
+
+        s += "\nBiasa     : " + (penumpangBiasa.isEmpty() ? "<kosong>" : "");
+        for (Penumpang p : penumpangBiasa) s += p.getNama() + " ";
+
+        s += "\nBerdiri   : " + (penumpangBerdiri.isEmpty() ? "<kosong>" : "");
+        for (Penumpang p : penumpangBerdiri) s += p.getNama() + " ";
