@@ -77,3 +77,10 @@ public class Bus {
 
         s += "\nBerdiri   : " + (penumpangBerdiri.isEmpty() ? "<kosong>" : "");
         for (Penumpang p : penumpangBerdiri) s += p.getNama() + " ";
+
+        int total = penumpangBiasa.size() + penumpangPrioritas.size() + penumpangBerdiri.size();
+        s += "\nJumlah Penumpang : " + total;
+        s += "\nTotal Pendapatan : Rp " + totalPendapatan;
+        return s;
+    }
+}
