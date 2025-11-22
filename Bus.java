@@ -28,3 +28,12 @@ public class Bus {
             System.out.println("Bus penuh!");
             return false;
         }
+
+        if (layakPrioritas(p)) {
+            if (penumpangPrioritas.size() < 4) penumpangPrioritas.add(p);
+            else if (penumpangBiasa.size() < 16) penumpangBiasa.add(p);
+            else penumpangBerdiri.add(p);
+        } else {
+            if (penumpangBiasa.size() < 16) penumpangBiasa.add(p);
+            else penumpangBerdiri.add(p);
+        }
