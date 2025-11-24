@@ -22,3 +22,20 @@ public class Penumpang implements BayarBus {
     public boolean getHamil() { return hamil; }
     public int getSaldo() { return saldo; }
     public Kategori getKategori() { return kategori; }
+
+    public void tambahSaldo(int jumlah) { saldo += jumlah; }
+
+    @Override
+    public void bayar(int ongkos) throws SaldoTidakCukupException {
+        if (saldo < ongkos) {
+            throw new SaldoTidakCukupException("Saldo tidak cukup!");
+        }
+        saldo -= ongkos;
+    }
+
+    @Override
+    public String toString() {
+        return "[Biasa] ID:" + id + " - " + nama + 
+               " (Umur " + umur + ", Saldo " + saldo + ")";
+    }
+}
