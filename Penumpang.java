@@ -15,3 +15,10 @@ public class Penumpang implements BayarBus {
         this.saldo = 10000;
         this.kategori = Kategori.BIASA;
     }
+
+    public int getID() { return id; }
+    public String getNama() { return nama; }
+    public int getUmur() { return umur; }
+    public boolean getHamil() { return hamil; }
+    public int getSaldo() { return saldo; }
+    public Kategori getKategori() { return kategori; }
