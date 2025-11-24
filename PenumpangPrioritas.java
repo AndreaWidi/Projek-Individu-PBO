@@ -5,3 +5,9 @@ public class PenumpangPrioritas extends Penumpang {
         this.kategori = Kategori.PRIORITAS;
     }
 
+    @Override
+    public String toString() {
+        return "[Prioritas] ID:" + id + " - " + nama + 
+               " (Umur " + umur + ", Hamil " + hamil + ", Saldo " + saldo + ")";
+    }
+}
