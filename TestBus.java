@@ -27,6 +27,7 @@ public class TestBus {
 
                 System.out.print("Umur : ");
                 int umur = in.nextInt();
+
                 System.out.print("Hamil? (1=ya, 0=tidak): ");
                 int h = in.nextInt();
 
@@ -36,11 +37,13 @@ public class TestBus {
                 } else {
                     p = new Penumpang(id, nama, umur, h == 1);
                 }
+
                 if (bus.naikkanPenumpang(p))
                     System.out.println("Penumpang berhasil naik!");
                 else
                     System.out.println("Gagal menaikkan penumpang!");
             }
+
             else if (pilihan == 2) {
                 System.out.print("Masukkan nama penumpang yang turun: ");
                 String nama = in.nextLine();
@@ -49,6 +52,7 @@ public class TestBus {
                 else
                     System.out.println("Penumpang tidak ditemukan.");
             }
+
             else if (pilihan == 3) {
                 System.out.println(bus);
             }
