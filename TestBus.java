@@ -36,3 +36,8 @@ public class TestBus {
                 } else {
                     p = new Penumpang(id, nama, umur, h == 1);
                 }
+                if (bus.naikkanPenumpang(p))
+                    System.out.println("Penumpang berhasil naik!");
+                else
+                    System.out.println("Gagal menaikkan penumpang!");
+            }
