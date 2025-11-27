@@ -18,3 +18,12 @@ public class TestBus {
             in.nextLine();
 
             if (pilihan == 1) {
+                System.out.print("ID Penumpang : ");
+                int id = in.nextInt();
+                in.nextLine();
+
+                System.out.print("Nama : ");
+                String nama = in.nextLine();
+
+                System.out.print("Umur : ");
+                int umur = in.nextInt();
