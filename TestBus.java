@@ -27,3 +27,12 @@ public class TestBus {
 
                 System.out.print("Umur : ");
                 int umur = in.nextInt();
+                System.out.print("Hamil? (1=ya, 0=tidak): ");
+                int h = in.nextInt();
+
+                Penumpang p;
+                if (umur > 60 || umur < 10 || h == 1) {
+                    p = new PenumpangPrioritas(id, nama, umur, h == 1);
+                } else {
+                    p = new Penumpang(id, nama, umur, h == 1);
+                }
