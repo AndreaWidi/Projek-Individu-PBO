@@ -49,3 +49,16 @@ public class TestBus {
                 else
                     System.out.println("Penumpang tidak ditemukan.");
             }
+            else if (pilihan == 3) {
+                System.out.println(bus);
+            }
+
+            else if (pilihan == 4) {
+                System.out.println("Program selesai.");
+                break;
+            }
+        }
+
+        in.close();
+    }
+}
