@@ -41,3 +41,11 @@ public class TestBus {
                 else
                     System.out.println("Gagal menaikkan penumpang!");
             }
+            else if (pilihan == 2) {
+                System.out.print("Masukkan nama penumpang yang turun: ");
+                String nama = in.nextLine();
+                if (bus.turunkanPenumpang(nama))
+                    System.out.println("Penumpang berhasil turun.");
+                else
+                    System.out.println("Penumpang tidak ditemukan.");
+            }
